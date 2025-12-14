@@ -65,3 +65,4 @@ class ExcelHandler:
         except Exception as e:
             raise Exception(f"Ошибка при создании Excel файла: {str(e)}")
 
+

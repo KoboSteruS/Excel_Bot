@@ -122,3 +122,4 @@ class JsonDB:
         else:
             raise IndexError(f"Индекс строки {row_index} вне диапазона")
 
+

@@ -17,3 +17,4 @@ EXPORTS_DIR = "exports"
 # Модель Mistral
 MISTRAL_MODEL = "mistral-large-latest"
 
+
