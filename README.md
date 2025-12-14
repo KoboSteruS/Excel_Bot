@@ -15,7 +15,14 @@ Telegram бот для загрузки Excel файлов, сохранения
 
 2. Установите зависимости:
 ```bash
+pip install --upgrade pip
 pip install -r requirements.txt
+```
+
+**Важно:** Если возникают ошибки импорта (например, `ImportError: cannot import name 'Update'`), это означает, что установлена старая версия библиотеки. В этом случае:
+```bash
+pip uninstall python-telegram-bot
+pip install python-telegram-bot==20.7
 ```
 
 3. Создайте файл `.env` на основе `.env.example`:

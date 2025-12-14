@@ -1,6 +1,6 @@
 import os
 import logging
-from telegram import Update, InputFile
+from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, ContextTypes, filters
 from telegram.constants import ParseMode
 import aiofiles
@@ -232,7 +232,8 @@ async def handle_text_message(update: Update, context: ContextTypes.DEFAULT_TYPE
                     # Отправляем файл
                     with open(export_file, 'rb') as f:
                         await update.message.reply_document(
-                            document=InputFile(f, filename=f"{sheet_name}_export.xlsx"),
+                            document=f,
+                            filename=f"{sheet_name}_export.xlsx",
                             caption=f"📊 Экспортированные данные из листа '{sheet_name}'"
                         )
                 except Exception as e:
